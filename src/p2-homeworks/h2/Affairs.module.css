@@ -1,0 +1,17 @@
+.container {
+    background-color: #050000;
+    width: 400px;
+
+}
+.bntAll {
+    margin: 10px;
+}
+.bnt {
+    margin: 5px;
+    border-radius: 50%;
+    border:1px slateblue solid;
+    background-color: slateblue;
+    color: white;
+    height: 20px;
+    font-weight: 700;
+}

@@ -1,0 +1,39 @@
+
+.standartInput {
+    width:200px;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+.standartInput:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+
+}
+
+.errorInput {
+    width:200px;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    background-color: #f6c3f0;
+}
+
+.error {
+    color: #ff0000;
+    font-family: ‘Raleway’, sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}

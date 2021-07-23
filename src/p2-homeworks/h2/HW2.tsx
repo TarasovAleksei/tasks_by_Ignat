@@ -1,0 +1,61 @@
+import React, {useState} from 'react'
+import Affairs from './Affairs'
+import classes from './HW2.module.css'
+
+// types
+export type AffairPriorityType = 'high' | 'middle' | 'low'
+export type AffairType = {
+    _id: number,
+    name: string,
+    priority: AffairPriorityType
+}
+export type FilterType = 'all' | AffairPriorityType
+
+// constants
+const defaultAffairs: AffairType[] = [ // need to fix any
+    {_id: 1, name: 'React', priority: 'high'},
+    {_id: 2, name: 'Anime', priority: 'low'},
+    {_id: 3, name: 'Games', priority: 'low'},
+    {_id: 4, name: 'Work', priority: 'high'},
+    {_id: 5, name: 'Html & css', priority: 'middle'},
+]
+
+// pure helper functions
+export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => {
+    return (filter === 'all') ? affairs
+        : affairs.filter(a => a.priority === filter)
+}
+export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => {
+    return (
+        affairs.filter(a => a._id !== _id)
+    )
+}
+
+const HW2 = () => {
+    const [affairs, setAffairs] = useState<AffairType[]>(defaultAffairs)
+    const [filter, setFilter] = useState<FilterType>('all')
+    const filteredAffairs = filterAffairs(affairs, filter)
+    const deleteAffairCallback = (_id: number) => {
+        setAffairs(deleteAffair(affairs, _id))
+    }
+
+    return (
+        <div>
+            <hr/>
+            homeworks 2
+            <hr/>
+            <div className={classes.container}>
+                <Affairs
+                    data={filteredAffairs}
+                    setFilter={setFilter}
+                    deleteAffairCallback={deleteAffairCallback}
+                />
+            </div>
+
+            <hr/>
+            <hr/>
+        </div>
+    )
+}
+
+export default HW2
