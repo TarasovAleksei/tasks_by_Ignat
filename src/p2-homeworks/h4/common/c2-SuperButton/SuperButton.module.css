@@ -2,7 +2,7 @@
     display: inline-block;
     width: 15em;
     font-size: 80%;
-    color: rgba(255,255,255,.9);
+    color: rgba(255, 255, 255, .9);
     text-shadow: #2e7ebd 0 1px 2px;
     text-decoration: none;
     text-align: center;
@@ -14,20 +14,22 @@
     border-radius: 6px;
     outline: none;
     background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
-    box-shadow: inset rgba(255,255,255,.5) 1px 1px;
+    box-shadow: inset rgba(255, 255, 255, .5) 1px 1px;
 }
 
 
-.default:first-line{
+.default:first-line {
     font-size: 170%;
     font-weight: 700;
 }
+
 .default:hover {
-    color: rgb(255,255,255);
+    color: rgb(255, 255, 255);
     background-image: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
 }
+
 .default:active {
-    color: rgb(255,255,255);
+    color: rgb(255, 255, 255);
     border-color: #2970a9;
     background-image: linear-gradient(#5796c8, #6aa2ce);
     box-shadow: none;
@@ -37,7 +39,7 @@
     display: inline-block;
     width: 15em;
     font-size: 80%;
-    color: rgba(255,255,255,.9);
+    color: rgba(255, 255, 255, .9);
     text-shadow: #2e7ebd 0 1px 2px;
     text-decoration: none;
     text-align: center;
@@ -45,9 +47,26 @@
     white-space: pre-line;
     padding: .7em 0;
     border: 1px solid;
-    border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
+    border-color: red;
     border-radius: 6px;
     outline: none;
     background: #f5c9c9 linear-gradient(#e09b9b, #f18181 50%, #f85050);
-    box-shadow: inset rgba(255,255,255,.5) 1px 1px;
+    box-shadow: inset rgba(255, 255, 255, .5) 1px 1px;
+}
+
+.red:first-line {
+    font-size: 170%;
+    font-weight: 700;
+}
+
+.red:hover {
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(#ffd4d9, #f59fb4 50%, #bb405a);
+}
+
+.red:active {
+    color: rgb(255, 255, 255);
+    border-color: #c40000;
+    background-image: linear-gradient(#ee999e, #f16076);
+    box-shadow: none;
 }

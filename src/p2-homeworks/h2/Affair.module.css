@@ -18,18 +18,36 @@
     width: 150px;
     color: white;
 }
-.priority {
+.priorityHigh {
     font-weight: 700;
-    color: #8000ff;
+    color: #fa0389;
     margin: 0 auto;
 }
-.btnDel {
-    margin-left: 50px;
-    border-radius: 50%;
-    border:1px slateblue solid;
-    background-color: #00fffd;
-    color: #005fac;
-    height: 20px;
+.priorityMiddle {
     font-weight: 700;
+    color: #4269f1;
+    margin: 0 auto;
+}
+.priorityLow {
+    font-weight: 700;
+    color: #00f807;
+    margin: 0 auto;
+}
 
+.btnDel {
+    border: 1px solid #070707;
+    font-size: 9px;
+    text-decoration: none;
+    background: #050505;
+    font-weight: 700;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 1px #aaa;
+    cursor: pointer;
+}
+
+.btnDel:hover {
+    background: #403d3d;
+    border-color: #8000ff;
+    box-shadow: 0 0 8px 0 #8000ff;
 }

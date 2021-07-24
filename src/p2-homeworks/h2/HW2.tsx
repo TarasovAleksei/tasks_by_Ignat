@@ -12,7 +12,7 @@ export type AffairType = {
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
-const defaultAffairs: AffairType[] = [ // need to fix any
+const defaultAffairs: AffairType[] = [
     {_id: 1, name: 'React', priority: 'high'},
     {_id: 2, name: 'Anime', priority: 'low'},
     {_id: 3, name: 'Games', priority: 'low'},
@@ -46,6 +46,7 @@ const HW2 = () => {
             <hr/>
             <div className={classes.container}>
                 <Affairs
+                    filter={filter}
                     data={filteredAffairs}
                     setFilter={setFilter}
                     deleteAffairCallback={deleteAffairCallback}

@@ -9,7 +9,8 @@ function HW4() {
     const error = text ? '' : 'Field is empty'
 
     const showAlert = () => {
-        error? alert('введите текст...') : alert(text)
+        error ? alert('введите текст...') : alert(text)
+        setText('')
     }
 
     const [checked, setChecked] = useState<boolean>(false)
@@ -19,17 +20,18 @@ function HW4() {
         <div>
             <hr/>
             homeworks 4
+            <hr/>
             <div className={s.column}>
                 <SuperInputText
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    // spanClassName={s.testSpanError} -- worked
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.blue} //  -- worked
                 />
 
                 <SuperButton>
@@ -42,29 +44,17 @@ function HW4() {
                 >
                     delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
-
                 <SuperButton disabled>
                     disabled
                 </SuperButton>
-
-                {/*----------------------------------------------------*/}
-
                 <SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    choose
                 </SuperCheckbox>
-
-                {/*// onChange тоже должен работать*/}
                 <SuperCheckbox checked={checked} onChange={testOnChange}/>
             </div>
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperInputText/>*/}
-            {/*<AlternativeSuperButton/>*/}
-            {/*<AlternativeSuperCheckbox/>*/}
             <hr/>
         </div>
     )

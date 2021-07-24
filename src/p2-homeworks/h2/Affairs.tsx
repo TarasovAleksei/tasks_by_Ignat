@@ -3,10 +3,11 @@ import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import classes from './Affairs.module.css'
 
-type AffairsPropsType = { // need to fix any
+type AffairsPropsType = {
     data: AffairType[]
     setFilter: (priority: FilterType) => void
     deleteAffairCallback: (_id: number) => void
+    filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -26,7 +27,7 @@ function Affairs(props: AffairsPropsType) {
 
     const setAll = () => {
         props.setFilter('all')
-    } // need to fix
+    }
     const setHigh = () => {
         props.setFilter('high')
     }
@@ -41,10 +42,11 @@ function Affairs(props: AffairsPropsType) {
         <div>
             {mappedAffairs}
             <div className={classes.bntAll}>
-                <button className={classes.bnt} onClick={setAll}>All</button>
-                <button className={classes.bnt} onClick={setHigh}>High</button>
-                <button className={classes.bnt} onClick={setMiddle}>Middle</button>
-                <button className={classes.bnt} onClick={setLow}>Low</button>
+
+                <button className={props.filter === 'all' ? classes.activeBnt : classes.bnt} onClick={setAll}>All</button>
+                <button className={props.filter === 'high' ? classes.activeBnt : classes.bnt} onClick={setHigh}>High</button>
+                <button className={props.filter === 'middle' ? classes.activeBnt : classes.bnt} onClick={setMiddle}>Middle</button>
+                <button className={props.filter === 'low' ? classes.activeBnt : classes.bnt} onClick={setLow}>Low</button>
             </div>
 
         </div>

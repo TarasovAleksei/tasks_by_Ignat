@@ -6,9 +6,18 @@
     width: 300px;
     font-size: 13px;
     padding: 6px 0 4px 10px;
-    border: 1px solid #cecece;
-    background: #F6F6f6;
+    border: 1px solid red;
+    background: #f5b1b1;
     border-radius: 8px;
+    outline: none;
+}
+.notError:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.error:focus {
+    border-color: #fa0048;
+    box-shadow: 0 0 8px 0 #ff1e38;
 }
 
 .notError{
@@ -18,6 +27,7 @@
     border: 1px solid #cecece;
     background: #F6F6f6;
     border-radius: 8px;
+    outline: none;
 }
 .errorMessage {
     color: red;
@@ -29,6 +39,12 @@
     border: 1px solid #cecece;
     background: #F6F6f6;
     border-radius: 8px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #fff;
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
 }
 .total {
     margin-left: 10px;

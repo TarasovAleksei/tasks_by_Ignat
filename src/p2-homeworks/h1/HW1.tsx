@@ -13,6 +13,8 @@ const HW1 = () => {
     return (
         <div>
             <hr/>
+            homeworks 1
+            <hr/>
             <Message
                 avatar={messageData.avatar}
                 name={messageData.name}

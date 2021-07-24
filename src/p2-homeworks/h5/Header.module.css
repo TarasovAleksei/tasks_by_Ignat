@@ -1,0 +1,37 @@
+a {
+    color: #fdfdfd;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 20px;
+}
+a.activeLink {
+    color: #fb00ff;
+    text-decoration: none;
+    font-weight: 700;
+}
+.juniorClass {
+    text-align: center;
+    margin-top: 200px;
+    font-size:30px;
+}
+.imgForJun {
+    width: 300px;
+    height: 200px;
+}
+.toggleContainer {
+    display: flex;
+    position: relative;
+    left: -282px;
+    margin-top: 5px;
+    transition: left .2s linear;
+}
+.toggle {
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    background-color: #ff52d6;
+    border-radius: 50%;
+}
+.toggleContainer:hover {
+    left: 0px;
+}
