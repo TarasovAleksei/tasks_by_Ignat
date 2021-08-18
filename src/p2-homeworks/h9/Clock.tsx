@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import styles from './Clock.module.css'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
@@ -7,43 +8,50 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        clearInterval(timerId)
     }
     const start = () => {
         stop()
-        const id: number = window.setInterval(() => {
-            // setDate
+        const time: number = +setInterval(() => {
+            setDate(new Date())
         }, 1000)
-        setTimerId(id)
+        setTimerId(time)
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     }
     const onMouseLeave = () => {
-        // close
+        setShow(false)
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const stringTime = date?.toLocaleTimeString()
+    const stringDate = date?.toLocaleDateString()
 
     return (
         <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
+            <div className={styles.bookacket}>
+                <div className={styles.uncomenkad}>
+                    <div className={styles.vemekunys} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                        {stringTime}
+                        {show && (<div className={styles.forDate}>{stringDate}</div>)}
+                    </div>
+                </div>
             </div>
 
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
-
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
+            <SuperButton style={{
+                width: "90px",
+                fontSize: '10px',
+                marginTop: '10px',
+                cursor: "pointer"
+            }} onClick={start}>start</SuperButton>
+            <SuperButton style={{
+                width: "90px",
+                fontSize: '10px',
+                marginTop: '10px',
+                marginLeft: '37px',
+                cursor: "pointer"
+            }} onClick={stop}>stop</SuperButton>
 
         </div>
     )

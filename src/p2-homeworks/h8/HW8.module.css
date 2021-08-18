@@ -1,0 +1,20 @@
+.container {
+    display: block;
+    width: 338px;
+    height: 150px;
+    border: 1px solid #003893;
+    border-radius: 5px;
+}
+.btns {
+    margin-top: 10px;
+}
+.items {
+    margin-left: 10px;
+    display: flex;
+    color: #078bd4;
+    font-size: 18px;
+    font-weight: 700;
+}
+.name {
+    width: 295px;
+}
