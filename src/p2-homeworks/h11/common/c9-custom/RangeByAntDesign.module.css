@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    width: 500px;
+}
+
+.forValue {
+    color: #046ac9;
+    font-weight: 700;
+}
+
+.slider {
+    width: 400px;
+}
+
+.switch {
+    width: 20px;
+}
+
+.disabled {
+    margin-left: 10px;
+    color: #046ac9;
+    font-weight: 700;
+}

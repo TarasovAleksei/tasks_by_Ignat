@@ -1,24 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
-    // min, max, step, disable, ...
-}
-
-const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
-    {
-        onChangeRange, value,
-        // min, max, step, disable, ...
-    }
-) => {
-    // сделать самому, можно подключать библиотеки
-
+const SuperDoubleRange = () => {
     return (
-        <>
-            DoubleRange
-        </>
-    )
-}
+        <div>
+            material.ui was here, but it got tired of its weight
+        </div>
+    );
+};
 
-export default SuperDoubleRange
+export default SuperDoubleRange;
