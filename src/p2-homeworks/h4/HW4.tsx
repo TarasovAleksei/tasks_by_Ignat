@@ -27,11 +27,10 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError} -- worked
                 />
 
                 <SuperInputText
-                    className={s.blue} //  -- worked
+                    className={s.blue}
                 />
 
                 <SuperButton>

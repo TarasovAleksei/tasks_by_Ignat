@@ -1,5 +1,7 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent} from 'react'
 import s from './SuperInputText.module.css'
+import {useSelector} from "react-redux";
+import {AppStoreType} from "../../../h10/bll/store";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -37,9 +39,19 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
         && onEnter()
         // то вызвать его
     }
-
+    const currentColorInput = useSelector<AppStoreType, string>(state => state.theme.currentColorInput)
+    const classForInput = () => {
+        switch (currentColorInput) {
+            case 'grey':
+                return s.standartInput
+            case 'orange':
+                return s.orangeInput
+            case 'brown':
+                return s.brownInput
+        }
+    }
     const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ''}`
-    const finalInputClassName = `${s.standartInput} ${error ? s.errorInput : s.standartInput} ${className} `
+    const finalInputClassName = `${classForInput()} ${error ? s.errorInput : classForInput()} ${className} `
     const superFinalSpanClassName = error ? finalSpanClassName : s.not_error
     return (
         <>

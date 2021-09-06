@@ -1,23 +1,31 @@
-.dark {
-    background: dimgrey;
+.container {
+    height: 100vh;
 }
 
-.dark-text {
-    color: aliceblue;
+.title {
+    text-align: center;
+    color: #8e892f;
+    font-weight: 700;
+    border: 1px solid #042b79;
+    font-size: 18px;
 }
 
-.red {
-    background: lightcoral;
+.settingsContainer {
+    border-bottom: 1px solid #042b79;
+    height: 200px;
 }
 
-.red-text {
-    color: aqua;
+.settings {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    color: #8e892f;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.some {
-    background: lightgreen;
-}
-
-.some-text {
-    color: darkslateblue;
+.item {
+    display: block;
+    width: 250px;
 }

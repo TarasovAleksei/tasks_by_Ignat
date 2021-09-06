@@ -1,3 +1,12 @@
-.App {
+.AppLight {
     background-color: #a1fcda;
+    color: #34020a;
+}
+.AppDark {
+    background-color: #49056c;
+    color: white;
+}
+.AppCustom {
+    background-color: #07baf5;
+    color: #021c34;
 }

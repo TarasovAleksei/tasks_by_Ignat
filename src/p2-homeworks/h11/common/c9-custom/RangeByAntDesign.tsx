@@ -52,7 +52,7 @@ export const RangeByAntDesign: React.FC<PropsType> = ({
                 <div className={classes.forValue}>{value2}</div>
             </div>
 
-            <div className={classes.disabled}>Disabled: <Switch className={classes.switch} size="small" checked={disabled} onChange={handleDisabledChange}/></div>
+            <div className={classes.x}>Disabled: <Switch className={classes.switch} size="small" checked={disabled} onChange={handleDisabledChange}/></div>
         </>
     );
 }
