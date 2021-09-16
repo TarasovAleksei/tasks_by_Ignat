@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from "react";
+import React from "react";
 import s from "./HW12.module.css";
 import SuperSelect from "../h7/common/c5-SuperSelect/SuperSelect";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
